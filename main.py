@@ -42,6 +42,10 @@ def main_loop(username):
         _thread.start_new_thread(recievingMessage, (c,) )
 
 
+    ## Clear the text feild after  sending a message
+    def reset():
+        
+        msg_entry.delete(0, END)
 
     def recievingMessage (c): 
         while True :
@@ -90,6 +94,8 @@ def main_loop(username):
         msg = str({'username':username,'alert':'None','message':msg})
         global c
         c.send(msg.encode('ascii'))
+        reset()
+        
         
 
 
@@ -194,7 +200,7 @@ def main_loop(username):
     win.configure(bg='#213a3b')
     win.resizable(0,0)
     win.title('UniChat')
-    photo = PhotoImage(file = "resources/chat.png")
+    photo = PhotoImage(file = "resources/chat1.png")
     win.iconphoto(False, photo)
 
     Label(win, text='',bg=bg,width=450,font=('arial black',15,'bold'),relief='groove',bd=0).pack()
@@ -216,6 +222,7 @@ def main_loop(username):
     msg_entry = Entry(win, font=('Cambria',15),width=31,bg=sbg)
     msg_entry.place(x=10,y=430)
     send_b = Button(win,fg='white',font=('arial black',10,'bold'), bd=0, text='Send',bg='#41a8ae',width=9,command=sendMessage).place(x=360,y=429)
+    win.bind('<Return>', sendMessage)
 
 
     ## User List

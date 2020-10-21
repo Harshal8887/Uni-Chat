@@ -85,34 +85,39 @@ def account_func(username):
 
     def name_func(arg):
         name = Tk()
-        name.geometry('250x200')
+        name.geometry('300x300')
         name.title(f'Change {arg}')
+        #name.iconphoto(False, photo)
         name.configure(bg=bg)
 
         Label(name, text=f'Change {arg}',font=('Calibri Light',20,'bold'),bg=bg,fg='white').pack()
 
-        Label(name, text='Enter Your Current Password.',font=('Calibri Light',13),bg=bg,fg='white').place(x=5,y=40)
+        Label(name, text='Enter Your Current Password.',font=('Calibri Light',13),bg=bg,fg='white').place(x=5,y=60)
 
         global cur_pass
         cur_pass = Entry(name,font=('Calibri Light',10,'bold'),show='*')
-        cur_pass.place(x=5,y=70)
+        cur_pass.place(x=10,y=90)
 
-        Label(name, text=f'Enter {arg} You Want To Set.',font=('Calibri Light',13),bg=bg,fg='white').place(x=5,y=100)
+        Label(name, text=f'Enter {arg} You Want To Set.',font=('Calibri Light',13),bg=bg,fg='white').place(x=5,y=120)
 
         global req_pass
         req_pass = Entry(name,font=('Calibri Light',10,'bold'))
-        req_pass.place(x=5,y=130)
+        req_pass.place(x=5,y=150)
 
-        Button(name, text='Apply Changes',bd=0,bg='White',fg='black',font=('Calibri Light',10,'bold'),command=lambda:change_info(arg)).place(x=50,y=170)
+        Button(name, text='Apply Changes',bd=0,bg='#41a8ae',fg='white',font=('Calibri Light',10,'bold'),command=lambda:change_info(arg)).place(x=90,y=200)
 
     
-    
+    bg = '#213a3b' #41a8ae #213a3b #eaffff
+    sbg = '#eaffff'
 
-    bg = '#408080'
+     #bg = '#408080'  
     
     pro = Toplevel()
+    
     pro.geometry('325x425')
     pro.resizable(0,0)
+    photo = PhotoImage(file = "resources/chat1.png")
+    pro.iconphoto(False, photo)
     pro.title('Profile')
     pro.configure(bg=bg)
 
@@ -130,10 +135,10 @@ def account_func(username):
 
     pencil = PhotoImage(file='resources\\pencil-32.png')
 
-    Label(pro,text='@'+user,font=('Calibri Light',16),bg=bg,fg='white').place(x=90,y=170)
+    Label(pro,text='@'+user,font=('Calibri Light',16),bg=bg,fg='white').place(x=110,y=180)
 
 
-    Label(pro,text=username.title(),font=('Calibri Light',20,'bold'),bg=bg,fg='white').place(x=90,y=140)
+    Label(pro,text=username.title(),font=('Calibri Light',18,'bold'),bg=bg,fg='white').place(x=110,y=150)
 
     Label(pro, text= 'Change Name',font=('Calibri Light',20),bg=bg,fg='white').place(x=10,y=220)
 

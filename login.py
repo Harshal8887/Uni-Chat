@@ -18,7 +18,7 @@ def login():
     log = Tk()
     log.title('UniChat')
     #log.iconbitmap('E:/project/minor/Chat Application/resources/chat.PNG')
-    photo = PhotoImage(file = "resources/chat.png")
+    photo = PhotoImage(file = "resources/chat1.png")
     log.iconphoto(False, photo)
     log.geometry('310x300+220+170')
     log.configure(bg='#213a3b')
@@ -121,7 +121,7 @@ def register():
     global reg
     reg = Tk()
     reg.title('UniChat')
-    photo = PhotoImage(file = "resources/chat.png")
+    photo = PhotoImage(file = "resources/chat1.png")
     reg.iconphoto(False, photo)
     reg.configure(bg='#213a3b')
     reg.geometry('450x450+220+170')
