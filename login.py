@@ -69,7 +69,9 @@ def login():
                 resp.configure(text=f'Login Successful\n Welcome {b} ', fg='green')
                 log.destroy()
                 f = open('isLog.txt','w')
-                to_write = 'logged in,'+b
+                # for development purpose
+                #to_write = 'logged in,'+b
+                to_write = 'logged off' 
                 f.write(to_write)
                 f.close()
                 main.main_loop(b)
@@ -189,7 +191,9 @@ def register():
                 username_name = name
                 reg.destroy()
                 f = open('isLog.txt','w')
-                to_write = 'logged in,'+username_name
+                #to_write = 'logged in,'+username_name
+                # for development purpose
+                to_write = 'logged off'
                 f.write(to_write)
                 f.close()
                 main.main_loop(username_name)
