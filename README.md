@@ -14,7 +14,9 @@ ii). CREATE TABLE LOG_DETAILS(NAME VARCHAR(20), USERNAME VARCHAR(20), PASSWORD V
 Configuration for the Database:
 
 user: root
-password : root
+
+password : password
+
 host: localhost
 
 
