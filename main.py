@@ -18,7 +18,9 @@ counter = 1
 def main_loop(username):
 
     def add_all_users_to_list():
-        db = mysql.connect(host='localhost',user='root',passwd='password',database='login_app')
+        #db = mysql.connect(host='localhost',user='root',passwd='password',database='login_app')
+        #for database server hosted online
+        db = mysql.connect(host='sql12.freemysqlhosting.net',port=3306,user='sql12372553',passwd='XlRVrGbdRf',database='sql12372553')
         c = db.cursor()
         c.execute(f'select name from log_details')
         p = c.fetchall()

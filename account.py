@@ -3,7 +3,9 @@ from tkinter import *
 from tkinter import messagebox as mb
 
 def account_func(username):
-    db = mysql.connect(host='localhost',user='root',passwd='password',database='login_app')
+    #db = mysql.connect(host='localhost',user='root',passwd='password',database='login_app')
+    # remote data base server
+    db = mysql.connect(host='sql12.freemysqlhosting.net',port=3306,user='sql12372553',passwd='XlRVrGbdRf',database='sql12372553')
     c = db.cursor()
 
     def change_info(arg):
