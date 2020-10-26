@@ -35,7 +35,8 @@ def main_loop(username):
         c = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         c.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,1)
         host = 'localhost'
-        port = 5000
+        port = 5555
+        #port = 6666
         c.connect((host,port))
         msg = {'username':username,'alert':'Online','message':'None'}
         c.send(str(msg).encode('utf-8'))

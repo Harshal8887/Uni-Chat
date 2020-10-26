@@ -5,7 +5,7 @@ import json
 s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)  
 s.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,1)
 host="localhost"
-port=5000
+port=5555
 s.bind((host,port))
 s.listen(5)
 clients=[]
